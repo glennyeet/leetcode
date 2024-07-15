@@ -1,9 +1,9 @@
 class Solution:
     def minPartitions(self, n: str) -> int:
-        maxDigit = -1
+        maxDigit = "0"
         for d in n:
-            if int(d) > maxDigit:
-                maxDigit = int(d)
-        return maxDigit
+            if d > maxDigit:
+                maxDigit = d
+        return int(maxDigit)
         # n = [int(d) for d in n]
         # return max(n)
