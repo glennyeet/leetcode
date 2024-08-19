@@ -23,3 +23,11 @@ class Solution:
                 if i % j == 0:
                     steps[i] = min(steps[i], steps[j] + i // j)
         return steps[n]
+        # steps = 0
+        # prime_factor = 2
+        # while n > 1:
+        #     while n % prime_factor == 0:
+        #         steps += prime_factor
+        #         n //= prime_factor
+        #     prime_factor += 1
+        # return steps
