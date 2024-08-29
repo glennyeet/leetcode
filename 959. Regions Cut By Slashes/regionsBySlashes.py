@@ -4,6 +4,7 @@ class Solution:
             parent[x] = self.find(parent, parent[x])
         return parent[x]
 
+    # Implement union by rank?
     def union(self, parent: list[int], a: int, b: int, size: int) -> int:
         parentA = self.find(parent, a)
         parentB = self.find(parent, b)
