@@ -17,17 +17,17 @@ class Solution:
         dummy_node = ListNode(next=head)
         while dummy_node.next:
             matrix[x][y] = dummy_node.next.val
-            if y == n_end and curr_direction % 4 == 0:  # from right to down
-                curr_direction += 1
+            if y == n_end and curr_direction % 4 == 0:  # right to down
+                curr_direction = (curr_direction + 1) % 4
                 m_start += 1
             elif x == m_end and curr_direction % 4 == 1:  # down to left
-                curr_direction += 1
+                curr_direction = (curr_direction + 1) % 4
                 n_end -= 1
             elif y == n_start and curr_direction % 4 == 2:  # left to up
-                curr_direction += 1
+                curr_direction = (curr_direction + 1) % 4
                 m_end -= 1
             elif x == m_start and curr_direction % 4 == 3:  # up to right
-                curr_direction += 1
+                curr_direction = (curr_direction + 1) % 4
                 n_start += 1
             dx, dy = directions[curr_direction % 4]
             x += dx
