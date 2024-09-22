@@ -3,12 +3,12 @@ class Solution:
         answer = 1
         i = 1
 
-        def get_subtree_size(answer: int) -> int:
+        def get_subtree_size(step: int) -> int:
             size = 0
-            neighbour = answer + 1
-            while answer <= n:
-                size += min(neighbour, n + 1) - answer
-                answer *= 10
+            neighbour = step + 1
+            while step <= n:
+                size += min(neighbour, n + 1) - step
+                step *= 10
                 neighbour *= 10
             return size
 
