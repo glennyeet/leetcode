@@ -7,7 +7,7 @@ class Solution:
         n_digits = math.floor(math.log10(n) + 1)
         start = 10 ** (n_digits - 1)
 
-        def generate_numbers(start, end):
+        def generate_numbers(start: int, end: int):
             for x in range(start, end + 1):
                 # First pass: 10^(n_digits - 1) to n
                 # Second pass: n // 10 + 1 to 10^(n_digits - 1) - 1
