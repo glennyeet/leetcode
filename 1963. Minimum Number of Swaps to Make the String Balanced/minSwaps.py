@@ -1,12 +1,9 @@
 class Solution:
     def minSwaps(self, s: str) -> int:
-        i = 0
-        stack = []
-        while i < len(s):
-            if s[i] == "]" and stack:
-                stack.pop()
+        stack = 0
+        for c in s:
+            if c == "]" and stack:
+                stack -= 1
             else:
-                stack.append(s[i])
-            i += 1
-        swaps = (len(stack) + 1) // 2
-        return swaps
+                stack += 1
+        return stack // 2
