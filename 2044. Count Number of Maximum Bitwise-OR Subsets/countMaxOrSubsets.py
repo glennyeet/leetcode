@@ -4,7 +4,7 @@ class Solution:
         for num in nums:
             max_or |= num
 
-        def count_subsets(or_sum: int, i: int):
+        def count_subsets(or_sum: int, i: int) -> int:
             if i == len(nums):
                 if or_sum == max_or:
                     return 1
