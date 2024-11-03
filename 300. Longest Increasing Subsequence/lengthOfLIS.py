@@ -15,10 +15,21 @@ class Solution:
         # return max(lengths)
 
         # Binary Search with O(nlog(n)) runtime
+        # def binary_search(num: int, nums_list: list[int]) -> int:
+        #     low = 0
+        #     high = len(nums_list)
+        #     while low < high:
+        #         mid = low + (high - low) // 2
+        #         if nums_list[mid] < num:
+        #             low = mid + 1
+        #         else:
+        #             high = mid
+        #     return low
 
         lengths = []
         smallest_nums = [-inf]
         for num in nums:
+            # index = binary_search(num, smallest_nums)
             index = bisect_left(smallest_nums, num)
             if index == len(smallest_nums):
                 smallest_nums.append(num)
