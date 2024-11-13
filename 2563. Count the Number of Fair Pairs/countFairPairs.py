@@ -8,7 +8,9 @@ class Solution:
         sorted_nums.sort()
         fair_pairs = 0
         for i, num in enumerate(sorted_nums):
-            if num > floor(upper // 2):
+            if num + sorted_nums[-1] < lower:
+                continue
+            elif num > floor(upper // 2):
                 break
             fair_pairs += bisect_right(sorted_nums, upper - num, i + 1) - bisect_left(
                 sorted_nums, lower - num, i + 1
