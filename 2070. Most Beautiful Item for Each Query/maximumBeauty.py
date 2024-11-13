@@ -13,8 +13,21 @@ class Solution:
                 max_beauties[-1][1] = max_beauty
             else:
                 max_beauties.append([item[0], max_beauty])
+
+        # def binary_search(target: int) -> int:
+        #     low = 0
+        #     high = len(max_beauties) - 1
+        #     while low <= high:
+        #         mid = low + (high - low) // 2
+        #         if max_beauties[mid][0] <= target:
+        #             low = mid + 1
+        #         else:
+        #             high = mid - 1
+        #     return low
+
         answer = []
         for query in queries:
+            # index = binary_search(query)
             index = bisect_right(max_beauties, [query, 10**9])
             if index == 0:
                 answer.append(0)
