@@ -7,15 +7,13 @@ class Solution:
         low = 1
         high = max(quantities)
         while low <= high:
-            mid = low + (high - low) // 2
+            x = low + (high - low) // 2
             stores = 0
-            x = mid
             for quantity in quantities:
-                x = max(x, mid)
-                stores += ceil(quantity / mid)
+                stores += ceil(quantity / x)
             if stores <= n:
                 min_x = x
-                high = mid - 1
+                high = x - 1
             else:
-                low = mid + 1
+                low = x + 1
         return min_x
