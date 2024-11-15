@@ -34,17 +34,17 @@ class Solution:
         def get_lps_table(string: str) -> list[int]:
             n = len(string)
             lps = [0] * n
-            prevLps = 0
+            prev_lps = 0
             i = 1
             while i < n:
-                if string[i] == string[prevLps]:
-                    lps[i] = prevLps + 1
-                    prevLps += 1
+                if string[i] == string[prev_lps]:
+                    lps[i] = prev_lps + 1
+                    prev_lps += 1
                     i += 1
-                elif prevLps == 0:
+                elif prev_lps == 0:
                     i += 1
                 else:
-                    prevLps = lps[prevLps - 1]
+                    prev_lps = lps[prev_lps - 1]
             return lps
 
         search_string = s + "-" + s[::-1]
