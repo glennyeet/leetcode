@@ -5,18 +5,18 @@ class Solution:
         #         return 0
         #     m = len(substring)
         #     lps = [0] * m
-        #     prevLps = 0
+        #     prev_lps = 0
         #     i = 1
         #     while i < m:
-        #         if substring[i] == substring[prevLps]:
-        #             lps[i] = prevLps + 1
-        #             prevLps += 1
+        #         if substring[i] == substring[prev_lps]:
+        #             lps[i] = prev_lps + 1
+        #             prev_lps += 1
         #             i += 1
-        #         elif prevLps == 0:
-        #             lps[i] = prevLps
+        #         elif prev_lps == 0:
+        #             lps[i] = prev_lps
         #             i += 1
         #         else:
-        #             prevLps = lps[prevLps - 1]
+        #             prev_lps = lps[prev_lps - 1]
         #     substring_index = 0
         #     string_index = 0
         #     while string_index < len(string):
