@@ -10,6 +10,8 @@ from collections import deque
 
 class Solution:
     def minimumOperations(self, root: Optional[TreeNode]) -> int:
+        # BFS + Hash map: O(nlog(n)) time, O(n) space
+
         level_groups = []
         queue = deque([root])
         while queue:
