@@ -3,7 +3,7 @@ from collections import Counter
 
 class Solution:
     def countPalindromicSubsequence(self, s: str) -> int:
-        # Hash map: O(n) time, O(1) space
+        # Hash map: O(n) time, O(1) space, where n is the length of s
 
         left = set()
         right = Counter(s)
