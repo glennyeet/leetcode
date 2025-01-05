@@ -1,6 +1,6 @@
 class Solution:
     def shiftingLetters(self, s: str, shifts: List[List[int]]) -> str:
-        # Prefix sum: O(n) time, O(n) space
+        # Line sweep: O(n) time, O(n) space
 
         n = len(s)
         prefix_diffs = [0] * (n + 1)
