@@ -3,8 +3,8 @@ from collections import Counter
 
 class Solution:
     def wordSubsets(self, words1: List[str], words2: List[str]) -> List[str]:
-        # Hash map: O(n + m) time, O(a) space, where n is the
-        # number of words in words1, m is the number of words in words2,
+        # Hash map: O(m + n) time, O(a) space, where m is the
+        # number of words in words2, n is the number of words in words1,
         # a is the size of the answer array universal_strings
 
         words2_counter = Counter()
