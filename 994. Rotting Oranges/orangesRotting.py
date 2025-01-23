@@ -3,6 +3,8 @@ from collections import deque
 
 class Solution:
     def orangesRotting(self, grid: List[List[int]]) -> int:
+        # BFS: O(m * n) time, O(m * n) space
+
         m = len(grid)
         n = len(grid[0])
         visited = [[False] * n for _ in range(m)]
