@@ -1,6 +1,6 @@
 class Solution:
     def check(self, nums: List[int]) -> bool:
-        # Brute force: O(n) time, O(1) space
+        # One-pass: O(n) time, O(1) space
 
         n = len(nums)
         sorted_nums = 1

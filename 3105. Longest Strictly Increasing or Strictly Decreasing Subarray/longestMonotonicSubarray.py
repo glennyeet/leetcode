@@ -1,6 +1,6 @@
 class Solution:
     def longestMonotonicSubarray(self, nums: List[int]) -> int:
-        # Brute force: O(n) time, O(1) space
+        # One-pass: O(n) time, O(1) space
 
         n = len(nums)
         max_strictly_increasing = 1
