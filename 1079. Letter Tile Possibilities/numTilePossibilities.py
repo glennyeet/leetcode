@@ -5,6 +5,7 @@ class Solution:
     def numTilePossibilities(self, tiles: str) -> int:
         # Backtracking: O(2^n) time, O(n) space, where
         # n is the size of tiles
+
         tiles_counter = Counter(tiles)
 
         def count_sequences() -> int:
