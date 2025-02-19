@@ -17,7 +17,6 @@ class Solution:
                 happy_string.pop()
 
         get_kth_happy_string(0, [])
-        print(happy_strings)
         if len(happy_strings) < k:
             return ""
         else:
