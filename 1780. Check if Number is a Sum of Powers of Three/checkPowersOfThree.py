@@ -1,6 +1,6 @@
 class Solution:
     def checkPowersOfThree(self, n: int) -> bool:
-        # Backtracking: O(n) time, O(n) space
+        # Backtracking: O(n) time, O(log_3(n)) space
 
         def is_powers_of_three_sum(cur_sum: int, exponent: int) -> bool:
             cur_power = 3**exponent
