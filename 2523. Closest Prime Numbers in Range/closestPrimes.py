@@ -13,7 +13,7 @@ class Solution:
         for i in range(2, int(sqrt(right)) + 1):
             if not is_prime[i]:
                 continue
-            for j in range(i + i, right + 1, i):
+            for j in range(i**2, right + 1, i):
                 is_prime[j] = False
         prime1 = None
         prime2 = None
