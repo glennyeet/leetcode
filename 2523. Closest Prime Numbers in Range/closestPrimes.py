@@ -30,7 +30,6 @@ class Solution:
                 prime1 = prime2
                 prime2 = i
             if ans[0] == -1 or prime2 - prime1 < ans[1] - ans[0]:
-                print(prime1, prime2)
                 ans[0] = prime1
                 ans[1] = prime2
         return ans
