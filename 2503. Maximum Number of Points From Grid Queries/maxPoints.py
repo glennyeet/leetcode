@@ -5,6 +5,7 @@ from heapq import heappush, heappop
 class Solution:
     def maxPoints(self, grid: List[List[int]], queries: List[int]) -> List[int]:
         # BFS: O(qlog(q) + m * nlog(m * n)) time, O(m * n) space
+
         m = len(grid)
         n = len(grid[0])
         q = len(queries)
