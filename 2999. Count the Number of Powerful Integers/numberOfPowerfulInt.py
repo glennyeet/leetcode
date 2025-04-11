@@ -11,11 +11,11 @@ class Solution:
             padded_s = "-" * max(len(x) - len(s), 0) + s
 
             @cache
-            def g(index: int, constrained: bool) -> int:
+            def g(index: int, tight: bool) -> int:
                 if index == len(padded_s):
                     return 1
                 powerful_integers = 0
-                if constrained:
+                if tight:
                     cur_digit = int(x[index])
                     if padded_s[index] == "-":
                         powerful_integers += min(cur_digit, limit + 1) * g(
