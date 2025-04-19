@@ -1,11 +1,13 @@
+from typing import List
 from bisect import bisect_left, bisect_right
-from math import floor
 
 
 class Solution:
     def countFairPairs(self, nums: List[int], lower: int, upper: int) -> int:
-        sorted_nums = nums.copy()
-        sorted_nums.sort()
+        # Binary Search: O(nlog(n)) time, O(n) space, where n is the size of
+        # nums
+
+        sorted_nums = sorted(nums)
 
         # def binary_search(target: int, low: int, high: int) -> int:
         #     while low <= high:
@@ -20,11 +22,8 @@ class Solution:
         for i, num in enumerate(sorted_nums):
             if num + sorted_nums[-1] < lower:
                 continue
-            elif num > floor(upper // 2):
+            elif num > upper // 2:
                 break
-            # fair_pairs += binary_search(
-            #     upper - num + 1, i + 1, len(sorted_nums) - 1
-            # ) - binary_search(lower - num, i + 1, len(sorted_nums) - 1)
             fair_pairs += bisect_right(sorted_nums, upper - num, i + 1) - bisect_left(
                 sorted_nums, lower - num, i + 1
             )
