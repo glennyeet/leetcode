@@ -1,4 +1,5 @@
 from typing import List
+
 # from sortedcontainers import SortedList
 from collections import deque
 
@@ -7,16 +8,15 @@ class Solution:
     def maxTaskAssign(
         self, tasks: List[int], workers: List[int], pills: int, strength: int
     ) -> int:
-        # Binary Search + Greedy: O(tlog(t) + wlog(w) + log(min(t, w)) * (tlog(min(t, w)) + wlog(min(t, w)))) time,
+        # Binary Search + Greedy: O(tlog(t) + log(min(t, w)) * (tlog(min(t, w)) + wlog(min(t, w)))) time,
         # O(t + w) space
 
         # t = len(tasks)
         # w = len(workers)
         # sorted_tasks = sorted(tasks, reverse=True)
-        # sorted_workers = sorted(workers, reverse=True)
 
         # def can_assign_all_tasks(tasks_start_index: int) -> bool:
-        #     cur_workers = SortedList(sorted_workers)
+        #     cur_workers = SortedList(workers)
         #     cur_pills = pills
         #     for i in range(tasks_start_index, t):
         #         if cur_workers[-1] >= sorted_tasks[i]:
