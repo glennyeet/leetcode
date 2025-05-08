@@ -16,7 +16,7 @@ class Solution:
             seconds, x, y = heappop(p_queue)
             if x == n - 1 and y == m - 1:
                 break
-            elif seconds < min_time[x][y]:
+            elif seconds > min_time[x][y]:
                 continue
             for dx, dy in directions:
                 x2 = x + dx
