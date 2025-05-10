@@ -3,7 +3,8 @@ from typing import List
 
 class Solution:
     def minSum(self, nums1: List[int], nums2: List[int]) -> int:
-        # Greedy: O(n) time, O(1) space
+        # Greedy: O(n + m) time, O(1) space, where n is the
+        # size of nums1 and m is the size of nums2
 
         nums1_zeroes = nums1.count(0)
         nums1_sum = sum(nums1) + nums1_zeroes
