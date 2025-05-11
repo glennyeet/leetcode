@@ -34,8 +34,8 @@ class Trie:
 
 class Solution:
     def findMaximumXOR(self, nums: List[int]) -> int:
-        # Trie: O(nlog(m)), where n is the size of
-        # nums and m is the largest number in nums
+        # Trie: O(nlog(m)) time, O(nlog(m)) space, where
+        # n is the size of nums and m is the largest number in nums
 
         trie = Trie(len(bin(max(nums))))
         for num in nums:
