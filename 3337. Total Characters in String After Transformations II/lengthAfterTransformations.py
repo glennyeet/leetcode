@@ -11,19 +11,6 @@ class Solution:
         for i in range(len(identity)):
             identity[i][i] = 1
 
-        def matrix_power(x: list[list[int]], power: int) -> int:
-            if power == 0:
-                return identity
-            elif power == 1:
-                return x
-            a_t_half = matrix_power(x, power // 2)
-            if power % 2:
-                return matrix_multiplication(
-                    matrix_multiplication(a_t_half, a_t_half), x
-                )
-            else:
-                return matrix_multiplication(a_t_half, a_t_half)
-
         def matrix_multiplication(
             a: list[list[int]], b: list[list[int]]
         ) -> list[list[int]]:
@@ -39,6 +26,19 @@ class Solution:
                 for j in range(b_cols):
                     c[i][j] %= mod_factor
             return c
+
+        def matrix_power(a: list[list[int]], power: int) -> int:
+            if power == 0:
+                return identity
+            elif power == 1:
+                return a
+            a_t_half = matrix_power(a, power // 2)
+            if power % 2:
+                return matrix_multiplication(
+                    matrix_multiplication(a_t_half, a_t_half), a
+                )
+            else:
+                return matrix_multiplication(a_t_half, a_t_half)
 
         character_counter = [[0] * 26]
         for char in s:
