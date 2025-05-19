@@ -3,7 +3,7 @@ from collections import defaultdict
 
 class Solution:
     def colorTheGrid(self, m: int, n: int) -> int:
-        # Bottom-up DP: O(n * 3^(m^2)) time, O(n * 3^m) space
+        # Bottom-up DP: O(n * 3^(2m)) time, O(n * 3^m) space
 
         mod_factor = 10**9 + 7
 
