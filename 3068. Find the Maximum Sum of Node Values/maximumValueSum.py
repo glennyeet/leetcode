@@ -3,6 +3,8 @@ from typing import List
 
 class Solution:
     def maximumValueSum(self, nums: List[int], k: int, edges: List[List[int]]) -> int:
+        # Greedy: O(nlog(n)) time, O(n) space
+
         n = len(nums)
         xor_increase = []
         for num in nums:
