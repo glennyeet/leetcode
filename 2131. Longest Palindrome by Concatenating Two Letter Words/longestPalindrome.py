@@ -4,6 +4,9 @@ from collections import Counter
 
 class Solution:
     def longestPalindrome(self, words: List[str]) -> int:
+        # Hash Table: O(n) time, O(n) space, where n is the
+        # size of words
+
         words_counter = Counter(words)
         longest_palindrome = 0
         palindrome_odd_occurence = False
