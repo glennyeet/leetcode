@@ -15,11 +15,11 @@ class Solution:
             in_degree[b] += 1
         colour_values = [[0] * 26 for _ in range(n)]
         queue = deque()
-        for i in range(n):
-            if in_degree[i] == 0:
-                queue.append(i)
-                colour = ord(colors[i]) - ord("a")
-                colour_values[i][colour] = 1
+        for node in range(n):
+            if in_degree[node] == 0:
+                queue.append(node)
+                colour = ord(colors[node]) - ord("a")
+                colour_values[node][colour] = 1
         while queue:
             cur_node = queue.popleft()
             for neighbour_node in adj_list[cur_node]:
@@ -41,6 +41,6 @@ class Solution:
             if degree > 0:
                 return -1
         largest_colour_value = 0
-        for colour in range(n):
-            largest_colour_value = max(largest_colour_value, max(colour_values[colour]))
+        for node in range(n):
+            largest_colour_value = max(largest_colour_value, max(colour_values[node]))
         return largest_colour_value
