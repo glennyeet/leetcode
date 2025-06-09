@@ -1,5 +1,7 @@
 class Solution:
     def findKthNumber(self, n: int, k: int) -> int:
+        # Trie: O((log(n))^2) time, O(1) space
+
         answer = 1
         i = 1
 
