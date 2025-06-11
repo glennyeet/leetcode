@@ -3,7 +3,7 @@ from collections import deque
 
 class Solution:
     def maxDifference(self, s: str, k: int) -> int:
-        # Sliding Window: O(n) time, O(n) space
+        # Sliding Window + Prefix Sum + Queue: O(n) time, O(n) space
 
         chars_set = set(s)
         s2 = s + "5"
