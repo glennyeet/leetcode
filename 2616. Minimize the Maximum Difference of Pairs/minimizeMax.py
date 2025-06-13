@@ -3,6 +3,9 @@ from typing import List
 
 class Solution:
     def minimizeMax(self, nums: List[int], p: int) -> int:
+        # Binary Search: O(nlog(u)) time, O(1) space, where
+        # u is the size of all possible numbers in nums
+
         if not p:
             return 0
         n = len(nums)
