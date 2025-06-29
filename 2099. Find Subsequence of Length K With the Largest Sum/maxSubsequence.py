@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def maxSubsequence(self, nums: List[int], k: int) -> List[int]:
-        # Sorting: O(nlog(n)) time, O(n) space
+        # Greedy: O(nlog(n)) time, O(n) space
 
         n = len(nums)
         nums_mappings = []
