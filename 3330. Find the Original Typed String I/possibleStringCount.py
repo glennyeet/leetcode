@@ -1,6 +1,6 @@
 class Solution:
     def possibleStringCount(self, word: str) -> int:
-        # One-Pass: O(n) time, O(1) space
+        # One-pass: O(n) time, O(1) space
 
         n = len(word)
         original_strings = 1
