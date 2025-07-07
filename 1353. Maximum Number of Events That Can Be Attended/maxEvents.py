@@ -5,6 +5,9 @@ from heapq import heappop, heappush
 
 class Solution:
     def maxEvents(self, events: List[List[int]]) -> int:
+        # Greedy: O(nlog(n)) time, O(n) space, where
+        # n is the size of events
+
         events_dict = defaultdict(list)
         for start, end in events:
             events_dict[start].append(end)
