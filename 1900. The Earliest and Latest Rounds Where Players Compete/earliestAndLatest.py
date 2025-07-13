@@ -17,7 +17,8 @@ class Solution:
 
         def calculate_round_result(players: list[int], current_round: int) -> None:
             p = len(players)
-            for i in range(p // 2):
+            matches = p // 2
+            for i in range(matches):
                 if (players[i], players[p - i - 1]) in [
                     (first_player, second_player),
                     (second_player, first_player),
@@ -27,7 +28,6 @@ class Solution:
                     nonlocal latest_round
                     latest_round = max(latest_round, current_round)
                     return
-            matches = p // 2
             if not p % 2:
                 matches -= 2
             else:
