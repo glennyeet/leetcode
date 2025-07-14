@@ -10,7 +10,7 @@ class ListNode:
 
 class Solution:
     def getDecimalValue(self, head: Optional[ListNode]) -> int:
-        # Math: O(n) time, O(1) space, where n is the size of
+        # Linked List + Math: O(n) time, O(1) space, where n is the size of
         # the linked list rooted at head
 
         decimal_value = 0
