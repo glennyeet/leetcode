@@ -41,7 +41,7 @@ class Solution:
                     c3 = subtree_sums[j]
                 elif i in descendants[j]:
                     c1 = subtree_sums[0] ^ subtree_sums[j]
-                    c2 = subtree_sums[i] ^ subtree_sums[j]
+                    c2 = subtree_sums[j] ^ subtree_sums[i]
                     c3 = subtree_sums[i]
                 else:
                     c1 = subtree_sums[0] ^ subtree_sums[i] ^ subtree_sums[j]
