@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def maxSubarrays(self, n: int, conflictingPairs: List[List[int]]) -> int:
-        # Prefix Sum: O(n * c) time, O(n) space, where c is the size of
+        # Greedy: O(n * c) time, O(n) space, where c is the size of
         # conflictingPairs
 
         b_to_a_mapping = [[] for _ in range(n + 1)]
