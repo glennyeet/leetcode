@@ -3,6 +3,8 @@ from typing import List
 
 class Solution:
     def smallestSubarrays(self, nums: List[int]) -> List[int]:
+        # Sliding Window + Bit Manipulation: O(n) time, O(n) space
+
         n = len(nums)
         bit_counts = [0] * 32
         cur_or = 0
