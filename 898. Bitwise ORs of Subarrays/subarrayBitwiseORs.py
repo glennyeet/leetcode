@@ -4,7 +4,7 @@ from typing import List
 class Solution:
     def subarrayBitwiseORs(self, arr: List[int]) -> int:
         # Bit Manipulation + Bottom-up DP: O(nlog(a)) time,
-        # O(nlog(a)) space, where n is the size of arr and 
+        # O(nlog(a)) space, where n is the size of arr and
         # a is the number of bits of max(arr)
 
         subarray_ors = set()
