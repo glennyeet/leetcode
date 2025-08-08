@@ -21,8 +21,8 @@ class Solution:
                 + calculate_probability(a_left - 1, b_left - 3)
             ) / 4
 
-        max_servings = ceil(n / 25)
-        for i in range(1, max_servings + 1):
+        total_servings = ceil(n / 25)
+        for i in range(1, total_servings + 1):
             if calculate_probability(i, i) > 1 - 1e-5:
                 return 1.0
-        return calculate_probability(max_servings, max_servings)
+        return calculate_probability(total_servings, total_servings)
