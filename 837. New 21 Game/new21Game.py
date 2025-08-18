@@ -8,7 +8,7 @@ class Solution:
             probabilities[i] = 1.0
         numerator = sum(probabilities[k + 1 : k + maxPts + 1])
         for i in reversed(range(k)):
-            numerator -= probabilities[i + maxPts + 1]
+            numerator -= probabilities[i + 1 + maxPts]
             numerator += probabilities[i + 1]
             probabilities[i] = numerator / maxPts
         return probabilities[0]
