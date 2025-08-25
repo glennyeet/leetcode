@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def longestSubarray(self, nums: List[int]) -> int:
-        # Array: O(n) time, O(n) space, where n is the
+        # Run-length encoding: O(n) time, O(n) space, where n is the
         # size of nums
 
         streaks = [0]
