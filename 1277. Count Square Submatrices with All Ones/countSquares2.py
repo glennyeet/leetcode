@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def countSquares(self, matrix: List[List[int]]) -> int:
-        # Bottom-up DP: O(mn) time, O(mn) space
+        # Bottom-up DP: O(m * n) time, O(m * n) space
 
         m = len(matrix)
         n = len(matrix[0])

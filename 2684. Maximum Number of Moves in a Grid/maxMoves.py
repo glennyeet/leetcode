@@ -1,6 +1,6 @@
 class Solution:
     def maxMoves(self, grid: List[List[int]]) -> int:
-        # Iterative DP with O(mn) space
+        # Iterative DP with O(m * n) space
         # rows = len(grid)
         # cols = len(grid[0])
         # moves = [[0] * cols for _ in range(rows)]

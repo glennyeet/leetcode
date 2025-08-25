@@ -6,7 +6,7 @@ class Solution:
         """
         Do not return anything, modify matrix in-place instead.
         """
-        # Hash Table: O(mn) time, O(m + n) space
+        # Hash Table: O(m * n) time, O(m + n) space
 
         m = len(matrix)
         n = len(matrix[0])

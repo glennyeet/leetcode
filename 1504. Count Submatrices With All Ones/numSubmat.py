@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def numSubmat(self, mat: List[List[int]]) -> int:
-        # Bottom-up DP: O(m^2 * n) time, O(mn) space
+        # Bottom-up DP: O(m^2 * n) time, O(m * n) space
 
         m = len(mat)
         n = len(mat[0])

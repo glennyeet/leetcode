@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def minimumArea(self, grid: List[List[int]]) -> int:
-        # One-pass: O(mn) time, O(1) space
+        # One-pass: O(m * n) time, O(1) space
 
         m = len(grid)
         n = len(grid[0])
