@@ -18,11 +18,11 @@ class Solution:
                     blanks.append((i, j))
                 else:
                     num = int(board[i][j]) - 1
-                    bitmask = 1 << num
-                    rows[i] |= bitmask
-                    cols[j] |= bitmask
+                    num_bit = 1 << num
+                    rows[i] |= num_bit
+                    cols[j] |= num_bit
                     sub_box = (i // 3) * 3 + j // 3
-                    sub_boxes[sub_box] |= bitmask
+                    sub_boxes[sub_box] |= num_bit
         solved = False
 
         def solve_sudoku(blank: int) -> None:
@@ -35,19 +35,19 @@ class Solution:
             for num in range(9):
                 if solved:
                     return
-                bitmask = 1 << num
+                num_bit = 1 << num
                 if (
-                    not rows[i] & bitmask
-                    and not cols[j] & bitmask
-                    and not sub_boxes[sub_box] & bitmask
+                    not rows[i] & num_bit
+                    and not cols[j] & num_bit
+                    and not sub_boxes[sub_box] & num_bit
                 ):
-                    rows[i] |= bitmask
-                    cols[j] |= bitmask
-                    sub_boxes[sub_box] |= bitmask
+                    rows[i] |= num_bit
+                    cols[j] |= num_bit
+                    sub_boxes[sub_box] |= num_bit
                     board[i][j] = str(num + 1)
                     solve_sudoku(blank + 1)
-                    rows[i] ^= bitmask
-                    cols[j] ^= bitmask
-                    sub_boxes[sub_box] ^= bitmask
+                    rows[i] ^= num_bit
+                    cols[j] ^= num_bit
+                    sub_boxes[sub_box] ^= num_bit
 
         solve_sudoku(0)
