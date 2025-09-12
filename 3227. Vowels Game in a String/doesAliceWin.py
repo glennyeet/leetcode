@@ -1,6 +1,6 @@
 class Solution:
     def doesAliceWin(self, s: str) -> bool:
-        # Game Theory: O(n) time, O(1) space, where n is the size of s
+        # Math: O(n) time, O(1) space, where n is the size of s
 
         vowels = ["a", "e", "i", "o", "u"]
         total_vowels = 0
