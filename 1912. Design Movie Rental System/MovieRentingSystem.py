@@ -1,6 +1,6 @@
 from typing import List
 from collections import defaultdict
-from heapq import heappush, heappop
+from heapq import heappush, heappop, heapify
 
 
 class MovieRentingSystem:
@@ -43,6 +43,12 @@ class MovieRentingSystem:
         # O(e) time, O(1) space
 
         self.rented_copies.remove((shop, movie))
+        pq_index = self.sorted_rented_copies.index(
+            (self.prices[shop, movie], shop, movie)
+        )
+        self.sorted_rented_copies[pq_index] = self.sorted_rented_copies[-1]
+        self.sorted_rented_copies.pop()
+        heapify(self.sorted_rented_copies)
 
     def report(self) -> List[List[int]]:
         # O(elog(e)) time, O(e) space
@@ -52,10 +58,6 @@ class MovieRentingSystem:
         while self.sorted_rented_copies and len(cheapest_rented_movies) < 5:
             price, shop, movie = heappop(self.sorted_rented_copies)
             cheapest_rented_copies.append((price, shop, movie))
-            if (shop, movie) not in self.rented_copies or (
-                cheapest_rented_movies and cheapest_rented_movies[-1] == [shop, movie]
-            ):
-                continue
             cheapest_rented_movies.append([shop, movie])
         for price, shop, movie in cheapest_rented_copies:
             heappush(self.sorted_rented_copies, (price, shop, movie))
