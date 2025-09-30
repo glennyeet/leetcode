@@ -4,6 +4,8 @@ from functools import cache
 
 class Solution:
     def minScoreTriangulation(self, values: List[int]) -> int:
+        # Top-down DP: O(n^3) time, O(n^2) space
+
         n = len(values)
 
         @cache
