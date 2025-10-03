@@ -4,8 +4,8 @@ from collections import Counter
 
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        # Hash Table + Sorting: O(nlog(n)) time, O(n) space, where n is the size
-        # of nums
+        # Hash Table + Sorting: O(nlog(n)) time, O(n) space, where
+        # n is the size of nums
 
         nums_counter = Counter(nums)
         sorted_frequencies = sorted(
