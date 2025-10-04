@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
-        # Simulation + Hash Table: O(1) time, O(1) space
+        # Hash Table: O(1) time, O(1) space
 
         for i in range(9):
             digits = set()
