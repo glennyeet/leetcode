@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
-        # Two Pointers + Hash Table: O(n * log(n)) time, O(n) space
+        # Two Pointers + Hash Table: O(n^2) time, O(n) space
 
         n = len(nums)
         sorted_nums = sorted(nums)
