@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def minTime(self, skill: List[int], mana: List[int]) -> int:
-        # Prefix Sum: O(m * n) time, O(m) space, where n is the size
+        # Bottom-up DP: O(m * n) time, O(m) space, where n is the size
         # of mana
 
         m = len(skill)
