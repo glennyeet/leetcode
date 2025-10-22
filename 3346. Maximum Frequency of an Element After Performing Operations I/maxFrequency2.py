@@ -4,6 +4,9 @@ from collections import Counter
 
 class Solution:
     def maxFrequency(self, nums: List[int], k: int, numOperations: int) -> int:
+        # Line Sweep: O(n * log(n)) time, O(n) space, where n is the size of
+        # nums
+
         nums_counter = Counter(nums)
         ranges_counter = Counter()
         endpoints = set(nums)
