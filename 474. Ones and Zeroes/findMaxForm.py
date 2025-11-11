@@ -4,7 +4,7 @@ from functools import cache
 
 class Solution:
     def findMaxForm(self, strs: List[str], m: int, n: int) -> int:
-        # Top-down DP: O(s * m * n * b) time, O(s * m * n) space, 
+        # Top-down DP: O(s * m * n * b) time, O(s * m * n) space,
         # where b is size of the longest string in strs
 
         s = len(strs)
