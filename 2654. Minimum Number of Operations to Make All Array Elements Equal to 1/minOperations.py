@@ -4,7 +4,8 @@ from math import gcd
 
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
-        # Math: O(n^2 * log(m)) time, O(1) space
+        # Math: O(n^2 * log(m)) time, O(1) space,
+        # where m is the largest number in nums
 
         n = len(nums)
         ones = 0
