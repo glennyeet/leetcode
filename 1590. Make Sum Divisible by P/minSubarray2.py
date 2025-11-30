@@ -3,6 +3,9 @@ from typing import List
 
 class Solution:
     def minSubarray(self, nums: List[int], p: int) -> int:
+        # Prefix Sum + Hash Table: O(n) time, O(n) space,
+        # where n is the size of nums
+
         total_remainder = sum(nums) % p
         if total_remainder == 0:
             return 0
