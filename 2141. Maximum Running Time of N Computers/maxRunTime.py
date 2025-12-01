@@ -3,8 +3,9 @@ from typing import List
 
 class Solution:
     def maxRunTime(self, n: int, batteries: List[int]) -> int:
-        # Binary Search: O(n * log(b)) time, O(1) space, where 
-        # b is the max value in batteries
+        # Binary Search: O(b * log(b * l / n)) time, O(1)
+        # space, where b is the size of batteries and l is the
+        # max value of batteries
 
         left = 1
         right = sum(batteries) // n
