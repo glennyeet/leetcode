@@ -4,6 +4,8 @@ from functools import cache
 
 class Solution:
     def maximumProfit(self, prices: List[int], k: int) -> int:
+        # Top-down DP: O(n * k) time, O(n * k) space
+
         n = len(prices)
 
         @cache
