@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def minDeletionSize(self, strs: List[str]) -> int:
-        # Greedy: O(n * m) time, O(n * m) space
+        # Greedy: O(m * n) time, O(n * m) space
 
         n = len(strs)
         m = len(strs[0])
