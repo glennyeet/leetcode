@@ -1,6 +1,6 @@
 class Solution:
     def bestClosingTime(self, customers: str) -> int:
-        # Prefix Sum: O(n) time, O(n) space, where n is the size of 
+        # Prefix Sum: O(n) time, O(n) space, where n is the size of
         # customers
 
         open_penalties = [0]
