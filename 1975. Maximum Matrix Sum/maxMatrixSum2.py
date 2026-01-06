@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def maxMatrixSum(self, matrix: List[List[int]]) -> int:
-        # Greedy: O(n ^ 2) time, O(1) space
+        # Greedy: O(n^2) time, O(1) space
 
         n = len(matrix)
         abs_sum = 0
