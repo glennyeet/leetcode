@@ -11,6 +11,9 @@ class TreeNode:
 
 class Solution:
     def maxProduct(self, root: Optional[TreeNode]) -> int:
+        # DFS: O(n) time, O(n) space, where n is the number of nodes in the
+        # binary tree rooted at root
+
         mod_factor = 10**9 + 7
 
         def find_tree_sum(node: Optional[TreeNode]) -> int:
