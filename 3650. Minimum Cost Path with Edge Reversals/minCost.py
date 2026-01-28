@@ -17,7 +17,7 @@ class Solution:
         min_cost[0] = 0
         while priority_queue:
             cur_cost, u = heappop(priority_queue)
-            if min_cost[u] > cur_cost:
+            if cur_cost > min_cost[u]:
                 continue
             for v, w in adj_list[u]:
                 new_cost = cur_cost + w
