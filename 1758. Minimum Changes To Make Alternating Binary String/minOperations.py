@@ -1,6 +1,6 @@
 class Solution:
     def minOperations(self, s: str) -> int:
-        # Bit Manipulation: O(n) time, O(1) space
+        # String: O(n) time, O(1) space
 
         n = len(s)
         zero_start_mismatches = 0
