@@ -3,8 +3,9 @@ from typing import List
 
 class Solution:
     def minElement(self, nums: List[int]) -> int:
-        # Array: O(n * log(n)) time, O(1) space, where
-        # n is the size of nums
+        # Array: O(n * log(d)) time, O(1) space, where
+        # n is the size of nums, and d is the number
+        # of digits of max(nums)
 
         min_digit_sum = float("inf")
         for num in nums:
