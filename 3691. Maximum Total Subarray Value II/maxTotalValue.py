@@ -32,7 +32,7 @@ class SparseTable:
 
 class Solution:
     def maxTotalValue(self, nums: List[int], k: int) -> int:
-        # Sparse Tree + Priority Queue: O(n * log(n) + k * log(n)) time,
+        # Sparse Table + Priority Queue: O(n * log(n) + k * log(n)) time,
         # O(n * log(n)) space
 
         n = len(nums)
