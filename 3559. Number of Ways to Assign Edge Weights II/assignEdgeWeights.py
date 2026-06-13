@@ -6,7 +6,7 @@ class Solution:
     def assignEdgeWeights(
         self, edges: List[List[int]], queries: List[List[int]]
     ) -> List[int]:
-        # DFS + Math: O(n * log(n) + q * log(n)) timee,
+        # DFS + Math: O(n * log(n) + q * log(n)) time,
         # O(n * log(n)) space, where q is the size of queries
 
         mod_factor = 10**9 + 7
