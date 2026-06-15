@@ -10,6 +10,8 @@ class ListNode:
 
 class Solution:
     def deleteMiddle(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        # Linked List: O(n) time, O(1) space
+
         if not head.next:
             return None
         n = 0
