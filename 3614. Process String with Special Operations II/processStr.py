@@ -1,6 +1,6 @@
 class Solution:
     def processStr(self, s: str, k: int) -> str:
-        # Simulation: O(n) time, O(1) space, 
+        # Simulation: O(n) time, O(1) space,
         # where n is the size of s
 
         result_len = 0
