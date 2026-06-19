@@ -3,8 +3,8 @@ from typing import List
 
 class Solution:
     def largestAltitude(self, gain: List[int]) -> int:
-        # Math: O(n) time, O(1) space, where n is the
-        # size of gain
+        # Prefix Sum: O(n) time, O(1) space, where n 
+        # is the size of gain
 
         max_altitude = 0
         cur_altitude = 0
